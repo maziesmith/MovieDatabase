@@ -1,0 +1,64 @@
+@using MovieDatabase.BL.Domain
+@model MovieDatabase.BL.Domain.Movie
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Gegevens bewerken</h2>
+
+<form asp-controller="Movie" asp-action="EditMovie" method="post">
+    <div class="form-group">
+        <label asp-for="Id" class="control-label">Nr</label>
+        <span class="text-danger"></span>
+        <input asp-for="Id" class="form-control" readonly="readonly"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Title" class="control-label">Titel</label>
+        <span class="text-danger"></span>
+        <input asp-for="Title" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="ReleaseDate" class="control-label">Release Date</label>
+        <span class="text-danger"></span>
+        <input asp-for="ReleaseDate" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Priority" class="control-label">Prioriteit</label>
+        <span class="text-danger"></span>
+        <input asp-for="Priority" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rating" class="control-label">Score</label>
+        <span class="text-danger"></span>
+        <input asp-for="Rating" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Genre.Name" class="control-label">Genre</label>
+        <span class="text-danger"></span>
+        <input asp-for="Genre.Name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsPresent" class="control-label">Aanwezig op pc</label>
+        <span class="text-danger"></span>
+        <input asp-for="IsPresent" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="WatchDate" class="control-label">Gekeken op</label>
+        <span class="text-danger"></span>
+        <input asp-for="WatchDate" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Duration" class="control-label">Duur</label>
+        <span class="text-danger"></span>
+        <input asp-for="Duration" class="form-control"/>
+    </div>
+
+    <button class="btn btn-default" type="submit">Bevestig update</button>
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial"/>
+}

@@ -1,0 +1,57 @@
+@using MovieDatabase.BL.Domain
+@model IEnumerable<MovieDatabase.BL.Domain.Media>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Bekeken films</h2>
+
+<table class="table">
+    <tr>
+        <td>Nr</td>
+        <td>Titel</td>
+        <td>Type</td>
+        <td>Datum bekeken</td>
+        <td>Acteur 1</td>
+        <td>Acteur 2</td>
+        <td>Acteur 3</td>
+        <td></td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        string name1 = "";
+        string name2 = "";
+        string name3 = "";
+        string shortDate = "";
+        if (item.WatchDate != null)
+        {
+            shortDate = item.WatchDate.Value.ToShortDateString();
+        }
+        try
+        {
+            name1 = item.TopThreeActors().ElementAt(0).Name;
+            name2 = item.TopThreeActors().ElementAt(1).Name;
+            name3 = item.TopThreeActors().ElementAt(2).Name;
+        }
+        catch (ArgumentOutOfRangeException e)
+        {
+        }
+        var detailMethod = item.MediaType == MediaType.Movie ? "DetailMovie" : "DetailSeries";
+        var editMethod = item.MediaType == MediaType.Movie ? "EditMovie" : "EditSeries";
+        <tr>
+            <td>@Html.DisplayFor(media => item.Id)</td>
+            <td>@Html.ActionLink(item.Title, detailMethod, "Movie", new {id = item.Id})</td>
+            <td>@item.MediaType.MediaTypeToString()</td>
+            <td>@shortDate</td>
+            <td>@name1</td>
+            <td>@name2</td>
+            <td>@name3</td>
+            <td>
+                @Html.ActionLink("Bewerken", editMethod, "Movie", new {id = item.Id}) |
+                <a href="#">Markeren als bekeken</a>
+            </td>
+        </tr>
+    }
+</table>

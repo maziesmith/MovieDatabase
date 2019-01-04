@@ -1,0 +1,18 @@
+D:\_MovieDatabase\moviedatabase\Domain\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.deps.json
+D:\_MovieDatabase\moviedatabase\Domain\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
+D:\_MovieDatabase\moviedatabase\Domain\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
+D:\_MovieDatabase\moviedatabase\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
+D:\_MovieDatabase\moviedatabase\Domain\obj\Debug\netcoreapp2.1\Domain.csproj.CoreCompileInputs.cache
+D:\_MovieDatabase\moviedatabase\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.cache
+D:\_MovieDatabase\moviedatabase\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
+D:\_MovieDatabase\moviedatabase\Domain\obj\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
+D:\_MovieDatabase\moviedatabase\Domain\obj\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.deps.json
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\obj\Debug\netcoreapp2.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.cache
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\obj\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\Domain\obj\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb

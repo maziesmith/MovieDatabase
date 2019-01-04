@@ -1,0 +1,36 @@
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.deps.json
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.runtimeconfig.json
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.runtimeconfig.dev.json
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.dll
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.pdb
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.dll
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.pdb
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
+D:\_MovieDatabase\moviedatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
+D:\_MovieDatabase\moviedatabase\UI\obj\Debug\netcoreapp2.1\UI.csprojAssemblyReference.cache
+D:\_MovieDatabase\moviedatabase\UI\obj\Debug\netcoreapp2.1\UI.csproj.CoreCompileInputs.cache
+D:\_MovieDatabase\moviedatabase\UI\obj\Debug\netcoreapp2.1\UI.AssemblyInfoInputs.cache
+D:\_MovieDatabase\moviedatabase\UI\obj\Debug\netcoreapp2.1\UI.AssemblyInfo.cs
+D:\_MovieDatabase\moviedatabase\UI\obj\Debug\netcoreapp2.1\UI.csproj.CopyComplete
+D:\_MovieDatabase\moviedatabase\UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.CA.dll
+D:\_MovieDatabase\moviedatabase\UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.CA.pdb
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.deps.json
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.runtimeconfig.json
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.runtimeconfig.dev.json
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.dll
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.CA.pdb
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.dll
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.pdb
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\obj\Debug\netcoreapp2.1\UI.csprojAssemblyReference.cache
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\obj\Debug\netcoreapp2.1\UI.csproj.CoreCompileInputs.cache
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\obj\Debug\netcoreapp2.1\UI.AssemblyInfoInputs.cache
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\obj\Debug\netcoreapp2.1\UI.AssemblyInfo.cs
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\obj\Debug\netcoreapp2.1\UI.csproj.CopyComplete
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.CA.dll
+C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.CA.pdb

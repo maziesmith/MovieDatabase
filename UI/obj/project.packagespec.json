@@ -1,0 +1,50 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\Michel Corthout\\Documents\\Senne\\MovieDatabase\\UI\\UI.csproj",
+    "projectName": "MovieDatabase.UI.CA",
+    "projectPath": "C:\\Users\\Michel Corthout\\Documents\\Senne\\MovieDatabase\\UI\\UI.csproj",
+    "outputPath": "C:\\Users\\Michel Corthout\\Documents\\Senne\\MovieDatabase\\UI\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "C:\\Users\\Michel Corthout\\Documents\\Senne\\MovieDatabase\\BL\\BL.csproj": {
+            "projectPath": "C:\\Users\\Michel Corthout\\Documents\\Senne\\MovieDatabase\\BL\\BL.csproj"
+          },
+          "C:\\Users\\Michel Corthout\\Documents\\Senne\\MovieDatabase\\Domain\\Domain.csproj": {
+            "projectPath": "C:\\Users\\Michel Corthout\\Documents\\Senne\\MovieDatabase\\Domain\\Domain.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

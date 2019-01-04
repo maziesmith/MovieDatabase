@@ -1,0 +1,50 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "D:\\_MovieDatabase\\moviedatabase\\BL\\BL.csproj",
+    "projectName": "MovieDatabase.BL",
+    "projectPath": "D:\\_MovieDatabase\\moviedatabase\\BL\\BL.csproj",
+    "outputPath": "D:\\_MovieDatabase\\moviedatabase\\BL\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "D:\\_MovieDatabase\\moviedatabase\\DAL\\DAL.csproj": {
+            "projectPath": "D:\\_MovieDatabase\\moviedatabase\\DAL\\DAL.csproj"
+          },
+          "D:\\_MovieDatabase\\moviedatabase\\Domain\\Domain.csproj": {
+            "projectPath": "D:\\_MovieDatabase\\moviedatabase\\Domain\\Domain.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
