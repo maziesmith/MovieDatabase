@@ -8,6 +8,13 @@
 
 <h2>Bekeken films</h2>
 
+<form asp-controller="Movie" asp-action="Index">
+    <p>
+        Title: <input type="text" name="SearchString">
+        <input type="submit" value="Filter"/>
+    </p>
+</form>
+
 <table class="table">
     <tr>
         <td>Nr</td>
@@ -31,12 +38,18 @@
         }
         try
         {
-            name1 = item.TopThreeActors().ElementAt(0).Name;
-            name2 = item.TopThreeActors().ElementAt(1).Name;
-            name3 = item.TopThreeActors().ElementAt(2).Name;
+            List<ActorAct> actorActs = item.ActorActs.ToList();
+            name1 = actorActs.ElementAt(0).Actor.Name;
+            name2 = actorActs.ElementAt(1).Actor.Name;
+            name3 = actorActs.ElementAt(2).Actor.Name;
         }
         catch (ArgumentOutOfRangeException e)
         {
+            // do nothing
+        }
+        catch (ArgumentNullException e2)
+        {
+            // do nothing
         }
         var detailMethod = item.MediaType == MediaType.Movie ? "DetailMovie" : "DetailSeries";
         var editMethod = item.MediaType == MediaType.Movie ? "EditMovie" : "EditSeries";
@@ -50,7 +63,7 @@
             <td>@name3</td>
             <td>
                 @Html.ActionLink("Bewerken", editMethod, "Movie", new {id = item.Id}) |
-                <a href="#">Markeren als bekeken</a>
+                @Html.ActionLink("Delete", "DeleteMedia", "Movie", new {id = item.Id})
             </td>
         </tr>
     }

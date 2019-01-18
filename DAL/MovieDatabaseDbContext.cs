@@ -21,7 +21,7 @@ namespace MovieDatabase.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data source=MovieDatabase.db");
+            optionsBuilder.UseSqlite("Data source=../DAL/MovieDatabase.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -33,24 +33,11 @@ namespace MovieDatabase.DAL
                 .HasValue<Movie>(MediaType.Movie)
                 .HasValue<Series>(MediaType.Series);
 
-            // Prevent navigation error
-            modelBuilder.Entity<Media>().Ignore(c => c.Actors);
-            modelBuilder.Entity<Actor>().Ignore(c => c.Media);
-
             // Configure many-to-many Actors-Media
-            modelBuilder.Entity<ActorAct>().Property<int>("ActorId");
-            modelBuilder.Entity<ActorAct>().Property<int>("MediaId");
-            modelBuilder.Entity<ActorAct>().HasKey("ActorId", "MediaId");
+            modelBuilder.Entity<ActorAct>().HasKey(aa => new {aa.MediaId, aa.ActorId});
 
-            modelBuilder.Entity<ActorAct>()
-                .HasOne(aa => aa.Media)
-                .WithMany(m => m.ActorActs)
-                .HasForeignKey("MediaId"); // Properties not defined in class --> no lambda
-
-            modelBuilder.Entity<ActorAct>()
-                .HasOne(aa => aa.Actor)
-                .WithMany(a => a.ActorActs)
-                .HasForeignKey("ActorId"); // Properties not defined in class --> no lambda
+            // Configure many-to-many Genre-Media
+            modelBuilder.Entity<MediaGenre>().HasKey(mg => new {mg.GenreId, mg.MediaId});
 
             // Genre name unique
             modelBuilder.Entity<Genre>().HasIndex(g => g.Name).IsUnique();

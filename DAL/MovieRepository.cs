@@ -1,18 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using MovieDatabase.BL.Domain;
 
 namespace MovieDatabase.DAL
 {
     public class MovieRepository : IMovieRepository
     {
-        private MovieDatabaseDbContext _context;
+        private readonly MovieDatabaseDbContext _context = new MovieDatabaseDbContext();
 
-        public MovieRepository()
+        public MovieDatabaseDbContext GetContext()
         {
-            _context = new MovieDatabaseDbContext();
+            return _context;
         }
+
 
         public IEnumerable<Media> ReadAllMedia()
         {
@@ -54,10 +57,8 @@ namespace MovieDatabase.DAL
             m.ReleaseDate = movie.ReleaseDate;
             m.Rating = movie.Rating;
             m.Priority = movie.Priority;
-            m.Genre = movie.Genre;
             m.IsPresent = movie.IsPresent;
             m.WatchDate = movie.WatchDate;
-            m.Actors = movie.Actors;
             m.ActorActs = movie.ActorActs;
             m.Duration = movie.Duration;
             _context.SaveChanges();
@@ -70,15 +71,23 @@ namespace MovieDatabase.DAL
             s.ReleaseDate = series.ReleaseDate;
             s.Rating = series.Rating;
             s.Priority = series.Priority;
-            s.Genre = series.Genre;
             s.IsPresent = series.IsPresent;
             s.WatchDate = series.WatchDate;
-            s.Actors = series.Actors;
             s.ActorActs = series.ActorActs;
             s.Season = series.Season;
             s.Channel = series.Channel;
             _context.SaveChanges();
         }
 
+        public void DeleteMedia(Media media)
+        {
+            _context.Media.Remove(media);
+            _context.SaveChanges();
+        }
+
+        public IEnumerable<Media> ReadMediaByTitle(string searchString)
+        {
+            return _context.Media.Where(m => m.Title.ToLower().Contains(searchString.ToLower()));
+        }
     }
 }

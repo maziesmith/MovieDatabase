@@ -9,24 +9,19 @@ namespace MovieDatabase.BL.Domain
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public DateTime? ReleaseDate { get; set; }
+        public int? ReleaseDate { get; set; } // Year
         public int? Priority { get; set; }
         public int? Rating { get; set; }
         public MediaType MediaType { get; set; }
-        public Genre Genre { get; set; }
         public bool IsPresent { get; set; }
         public DateTime? WatchDate { get; set; }
-        public ICollection<Actor> Actors { get; set; }
-        public ICollection<ActorAct> ActorActs { get; set; }
 
-        public IEnumerable<Actor> TopThreeActors()
-        {
-            return Actors.Take(3);
-        }
+        public ICollection<ActorAct> ActorActs { get; set; }
+        public ICollection<MediaGenre> MediaGenres { get; set; }
 
         public override string ToString()
         {
-            return string.Format("Title: {0}\nRelease date: {1}\n", Title, ReleaseDate);
+            return $"Title: {Title}\nRelease date: {ReleaseDate}\n";
         }
     }
 }

@@ -1,15 +1,3 @@
-D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.deps.json
-D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
-D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
-D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
-D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
-D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.csprojAssemblyReference.cache
-D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.csproj.CoreCompileInputs.cache
-D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfoInputs.cache
-D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfo.cs
-D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.csproj.CopyComplete
-D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
-D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.deps.json
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
@@ -22,3 +10,15 @@ C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\DAL\obj\Debug\netcoreapp2
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\DAL\obj\Debug\netcoreapp2.1\DAL.csproj.CopyComplete
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\DAL\obj\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\DAL\obj\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
+D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.deps.json
+D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
+D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
+D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
+D:\_MovieDatabase\moviedatabase\DAL\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
+D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.csprojAssemblyReference.cache
+D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.csproj.CoreCompileInputs.cache
+D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfoInputs.cache
+D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.AssemblyInfo.cs
+D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\DAL.csproj.CopyComplete
+D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
+D:\_MovieDatabase\moviedatabase\DAL\obj\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb

@@ -6,6 +6,7 @@ namespace MovieDatabase.DAL
 {
     public interface IMovieRepository
     {
+        MovieDatabaseDbContext GetContext();
         IEnumerable<Media> ReadAllMedia();
         Media ReadMedia(int id);
         Movie ReadMovie(int id);
@@ -14,5 +15,7 @@ namespace MovieDatabase.DAL
         void CreateSeries(Series series);
         void UpdateMovie(Movie movie);
         void UpdateSeries(Series series);
+        void DeleteMedia(Media media);
+        IEnumerable<Media> ReadMediaByTitle(string searchString);
     }
 }

@@ -6,12 +6,14 @@
     Layout = "_Layout";
 }
 @{
-    var shortReleaseDate = Model.ReleaseDate != null ? Model.ReleaseDate.Value.ToShortDateString() : "Onbekend";
-    var shortWatchDate = Model.WatchDate != null ? Model.WatchDate.Value.ToShortDateString() : "Onbekend";
+    string releaseYear = Model.ReleaseDate != null ? Model.ReleaseDate.ToString() : "?";
+    var shortWatchDate = Model.WatchDate != null ? Model.WatchDate.Value.ToShortDateString() : "?";
+    @*
     var genre = Model.Genre != null ? Model.Genre.Name : "Onbekend";
+    *@
     var score = Model.Rating == null ? "?" : Model.Rating.ToString();
     var duration = Model.Duration == null ? "?" : Model.Duration.ToString();
-    string isPresent = Model.IsPresent == true ? "Ja" : "Nee";
+    string isPresent = Model.IsPresent ? "Ja" : "Nee";
 }
 
 <h2>Details film</h2>
@@ -20,8 +22,8 @@
     <b>@Model.Title</b>
 </h3>
 <p>
-    <b>Release Date:</b> @shortReleaseDate <br/>
-    <b>Genre</b>: @genre <br/>
+    <b>Release Date:</b> @releaseYear <br/>
+    <b>Genre</b>: TODO <br/>
     <b>Duur:</b> @duration <br/>
 </p>
 
@@ -31,6 +33,9 @@
     <b>Gekeken op: </b> @shortWatchDate <br/>
     <b>Aanwezig op pc: </b> @isPresent <br/>
 </p>
+
+@*
+TODO
 
 @if (Model.Actors != null && Model.Actors.Any())
 {
@@ -46,5 +51,6 @@
         }
     </ul>
 }
+*@
 
-<a asp-controller="Movie", asp-action="ListWatched">Terug naar overzicht bekeken films</a>
+<a asp-controller="Movie", asp-action="Index">Terug naar overzicht bekeken films</a>

@@ -1,37 +1,3 @@
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.deps.json
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.runtimeconfig.json
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.runtimeconfig.dev.json
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.dll
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.pdb
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.Views.dll
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.Views.pdb
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.dll
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.pdb
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.csprojAssemblyReference.cache
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.csproj.CoreCompileInputs.cache
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorAssemblyInfo.cache
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorAssemblyInfo.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.AssemblyInfoInputs.cache
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.AssemblyInfo.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.TagHelpers.input.cache
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.TagHelpers.output.cache
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorCoreGenerate.cache
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorTargetAssemblyInfo.cache
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorTargetAssemblyInfo.cs
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.Views.pdb
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.csproj.CopyComplete
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.dll
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.pdb
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.deps.json
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.runtimeconfig.json
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.runtimeconfig.dev.json
@@ -68,8 +34,42 @@ C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\MovieDatabase.UI\obj\Debu
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.csproj.CopyComplete
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.dll
 C:\Users\Michel Corthout\Documents\Senne\MovieDatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.pdb
-D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Movie\ListWatched.g.cshtml.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.deps.json
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.runtimeconfig.json
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.runtimeconfig.dev.json
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.dll
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.pdb
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.Views.dll
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.UI.Views.pdb
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.dll
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.dll
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.dll
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.pdb
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.BL.Domain.pdb
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\bin\Debug\netcoreapp2.1\MovieDatabase.DAL.pdb
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.csprojAssemblyReference.cache
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.csproj.CoreCompileInputs.cache
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorAssemblyInfo.cache
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorAssemblyInfo.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.AssemblyInfoInputs.cache
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.AssemblyInfo.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.TagHelpers.input.cache
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.TagHelpers.output.cache
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorCoreGenerate.cache
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Movie\DetailMovie.g.cshtml.cs
 D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Movie\DetailSeries.g.cshtml.cs
 D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Movie\EditMovie.g.cshtml.cs
 D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Movie\EditSeries.g.cshtml.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Movie\Index.g.cshtml.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorTargetAssemblyInfo.cache
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.RazorTargetAssemblyInfo.cs
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.Views.pdb
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.csproj.CopyComplete
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.dll
+D:\_MovieDatabase\moviedatabase\MovieDatabase.UI\obj\Debug\netcoreapp2.1\MovieDatabase.UI.pdb

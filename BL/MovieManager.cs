@@ -6,7 +6,17 @@ namespace MovieDatabase.BL
 {
     public class MovieManager : IMovieManager
     {
-        private readonly IMovieRepository _movieRepository = new MovieRepository();
+        private readonly IMovieRepository _movieRepository;
+
+        public MovieManager()
+        {
+            _movieRepository = new MovieRepository();
+        }
+
+        public IMovieRepository GetRepository()
+        {
+            return _movieRepository;
+        }
 
         public IEnumerable<Media> GetAllMedia()
         {
@@ -47,6 +57,16 @@ namespace MovieDatabase.BL
         public void ChangeSeries(Series series)
         {
             _movieRepository.UpdateSeries(series);
+        }
+
+        public void RemoveMedia(Media media)
+        {
+            _movieRepository.DeleteMedia(media);
+        }
+
+        public IEnumerable<Media> GetMediaByTitle(string searchString)
+        {
+            return _movieRepository.ReadMediaByTitle(searchString);
         }
     }
 }
