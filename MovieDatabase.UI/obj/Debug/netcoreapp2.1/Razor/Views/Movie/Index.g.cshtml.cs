@@ -71,7 +71,7 @@ using MovieDatabase.BL.Domain;
             WriteLiteral("\r\n<h2>Bekeken films</h2>\r\n\r\n");
             EndContext();
             BeginContext(175, 179, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e6b6e698618b48f383bdd0d3ca485806", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ba55566959c4d4db37c630dedec7886", async() => {
                 BeginContext(223, 124, true);
                 WriteLiteral("\r\n    <p>\r\n        Title: <input type=\"text\" name=\"SearchString\">\r\n        <input type=\"submit\" value=\"Filter\"/>\r\n    </p>\r\n");
                 EndContext();

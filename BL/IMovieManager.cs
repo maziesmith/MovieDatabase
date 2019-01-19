@@ -6,7 +6,6 @@ namespace MovieDatabase.BL
 {
     public interface IMovieManager
     {
-         IMovieRepository GetRepository();
         IEnumerable<Media> GetAllMedia();
         Media GetMedia(int id);
         Movie GetMovie(int id);
@@ -17,5 +16,6 @@ namespace MovieDatabase.BL
         void ChangeSeries(Series series);
         void RemoveMedia(Media media);
         IEnumerable<Media> GetMediaByTitle(string searchString);
+        void AddMediaGenre(Media media, IEnumerable<Genre> genres);
     }
 }

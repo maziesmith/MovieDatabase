@@ -68,5 +68,10 @@ namespace MovieDatabase.BL
         {
             return _movieRepository.ReadMediaByTitle(searchString);
         }
+
+        public void AddMediaGenre(Media media, IEnumerable<Genre> genres)
+        {
+            _movieRepository.CreateMediaGenre(media, genres);
+        }
     }
 }

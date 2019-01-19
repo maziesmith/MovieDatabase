@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using MovieDatabase.BL.Domain;
@@ -29,7 +27,7 @@ namespace MovieDatabase.DAL
 
         public Movie ReadMovie(int id)
         {
-            return _context.Movies.Find(id);
+            return _context.Movies.Include(m => m.MediaGenres).FirstOrDefault(m => m.Id == id);
         }
 
         public Series ReadSeries(int id)
@@ -61,6 +59,7 @@ namespace MovieDatabase.DAL
             m.WatchDate = movie.WatchDate;
             m.ActorActs = movie.ActorActs;
             m.Duration = movie.Duration;
+            m.MediaGenres = movie.MediaGenres;
             _context.SaveChanges();
         }
 
@@ -76,6 +75,7 @@ namespace MovieDatabase.DAL
             s.ActorActs = series.ActorActs;
             s.Season = series.Season;
             s.Channel = series.Channel;
+            s.MediaGenres = s.MediaGenres;
             _context.SaveChanges();
         }
 
@@ -88,6 +88,16 @@ namespace MovieDatabase.DAL
         public IEnumerable<Media> ReadMediaByTitle(string searchString)
         {
             return _context.Media.Where(m => m.Title.ToLower().Contains(searchString.ToLower()));
+        }
+
+        public void CreateMediaGenre(Media media, IEnumerable<Genre> genres)
+        {
+            foreach (var genre in genres)
+            {
+                _context.MediaGenres.Add(new MediaGenre {Genre = genre, Media = media});
+            }
+
+            _context.SaveChanges();
         }
     }
 }

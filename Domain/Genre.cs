@@ -1,12 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-
 namespace MovieDatabase.BL.Domain
 {
-    public class Genre
+    public enum Genre
     {
-        public int GenreId { get; set; }
-        public string Name { get; set; }
-        public ICollection<MediaGenre> MediaGenres { get; set; }
+        Unknown = 0,
+        Action,
+        Adventure,
+        Comedy,
+        Crime,
+        Drama,
+        Fantasy,
+        Historical,
+        Horror,
+        Mystery,
+        Political,
+        Romance,
+        Satire,
+        ScienceFiction,
+        Thriller,
+        Western
     }
 }

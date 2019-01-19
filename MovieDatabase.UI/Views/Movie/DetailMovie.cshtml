@@ -1,3 +1,4 @@
+@using Microsoft.EntityFrameworkCore.Internal
 @using MovieDatabase.BL.Domain
 @model MovieDatabase.BL.Domain.Movie
 
@@ -23,7 +24,18 @@
 </h3>
 <p>
     <b>Release Date:</b> @releaseYear <br/>
-    <b>Genre</b>: TODO <br/>
+    <b>Genre</b>:<br/>
+    @{
+        if (Model.MediaGenres != null && Model.MediaGenres.Any())
+        {
+            <ul>
+                @foreach (var item in Model.MediaGenres)
+                {
+                    <li>@item.Genre.ToString("G")</li>
+                }
+            </ul>
+        }
+    }
     <b>Duur:</b> @duration <br/>
 </p>
 

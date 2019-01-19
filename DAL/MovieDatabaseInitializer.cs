@@ -6,11 +6,11 @@ namespace MovieDatabase.DAL
 {
     public class MovieDatabaseInitializer
     {
-        private static bool hasRun;
+        private static bool _hasRun;
 
         public static void Initialize(MovieDatabaseDbContext context, bool dropDatabase = false)
         {
-            if (!hasRun)
+            if (!_hasRun)
             {
                 if (dropDatabase)
                 {
@@ -22,26 +22,19 @@ namespace MovieDatabase.DAL
                     Seed(context);
                 }
 
-                hasRun = true;
+                _hasRun = true;
             }
         }
 
         static void Seed(MovieDatabaseDbContext ctx)
         {
-            Genre action = new Genre {Name = "Action"};
-            Genre scifi = new Genre {Name = "Sci-Fi"};
-            Genre adventure = new Genre {Name = "Adventure"};
-            Genre comedy = new Genre {Name = "Comedy"};
-            Genre crime = new Genre {Name = "Crime"};
-            Genre drama = new Genre {Name = "Drama"};
-            Genre biography = new Genre {Name = "Biography"};
-
             Movie m1 = new Movie
             {
                 Id = 1,
                 Title = "Iron man",
                 ReleaseDate = 2008,
                 WatchDate = new DateTime(2015, 1, 5),
+                MediaGenres = new List<MediaGenre>()
             };
             Movie m2 = new Movie
             {
@@ -49,6 +42,7 @@ namespace MovieDatabase.DAL
                 Title = "The Wolf of Wallstreet",
                 ReleaseDate = 2013,
                 WatchDate = new DateTime(2017, 4, 14),
+                MediaGenres = new List<MediaGenre>()
             };
             Movie m3 = new Movie
             {
@@ -56,6 +50,7 @@ namespace MovieDatabase.DAL
                 Title = "Captain America: Civil War",
                 ReleaseDate = 2016,
                 WatchDate = new DateTime(2017, 1, 9),
+                MediaGenres = new List<MediaGenre>{new MediaGenre(), new MediaGenre()}
             };
             Movie m4 = new Movie
             {
@@ -63,26 +58,34 @@ namespace MovieDatabase.DAL
                 Title = "Terminator",
                 ReleaseDate = 1984,
                 WatchDate = new DateTime(2018, 5, 5),
+                MediaGenres = new List<MediaGenre>{new MediaGenre(), new MediaGenre()}
             };
             Series s1 = new Series
             {
                 Id = 5,
                 Title = "Vikings",
                 Season = 1,
-                Channel = "History"
+                Channel = "History",
+                MediaGenres = new List<MediaGenre>{new MediaGenre(), new MediaGenre()}
             };
             Series s3 = new Series
             {
                 Id = 7,
                 Title = "Game of Thrones",
                 Season = 1,
-                Channel = "HBO"
+                Channel = "HBO",
+                MediaGenres = new List<MediaGenre>{new MediaGenre(), new MediaGenre()}
             };
             ActorAct aa1 = new ActorAct {Actor = new Actor {Name = "Robert Downey Jr"}, Media = m1};
             ActorAct aa2 = new ActorAct {Actor = new Actor {Name = "Terrence Howard"}, Media = m1};
             ActorAct aa3 = new ActorAct {Actor = new Actor {Name = "Scarlett Johanson"}, Media = m3};
             ActorAct aa4 = new ActorAct {Actor = new Actor {Name = "Travis Fimmel"}, Media = s1};
 
+            MediaGenre mg1 = new MediaGenre {Genre = Genre.ScienceFiction, Id = 1, Media = m1};
+            MediaGenre mg2 = new MediaGenre {Genre = Genre.Action, Id = 2, Media = m1};
+            MediaGenre mg3 = new MediaGenre {Genre = Genre.Horror, Id = 3, Media = m2};
+            m1.MediaGenres = new List<MediaGenre> {mg1, mg2};
+            m2.MediaGenres = new List<MediaGenre> {mg3};
             /*
             Test searching speed
             List<Movie> list = new List<Movie>();
@@ -100,8 +103,8 @@ namespace MovieDatabase.DAL
             */
 
             ctx.Movies.AddRange(m2, m3, m4);
-            ctx.ActorActs.AddRange(aa1, aa2, aa3, aa4);
             ctx.Series.AddRange(s3);
+            ctx.ActorActs.AddRange(aa1, aa2, aa3, aa4);
             ctx.SaveChanges();
         }
     }

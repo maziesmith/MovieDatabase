@@ -17,5 +17,6 @@ namespace MovieDatabase.DAL
         void UpdateSeries(Series series);
         void DeleteMedia(Media media);
         IEnumerable<Media> ReadMediaByTitle(string searchString);
+        void CreateMediaGenre(Media media, IEnumerable<Genre> genres);
     }
 }

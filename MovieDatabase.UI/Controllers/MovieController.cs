@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using MovieDatabase.BL;
 using MovieDatabase.BL.Domain;
 
@@ -13,22 +16,31 @@ namespace MovieDatabase.UI.Controllers
             _mgr = new MovieManager();
         }
 
-        // GET
+        /**
+         * Returns a list of all media
+         * @param string to filter by title
+         */
         public IActionResult Index(string searchString)
         {
-            if (string.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
-                return View(_mgr.GetAllMedia());
+                return View(_mgr.GetMediaByTitle(searchString));
             }
 
-            return View(_mgr.GetMediaByTitle(searchString));
+            return View(_mgr.GetAllMedia());
         }
 
+        /**
+         * Detailed overview of a movie
+         */
         public IActionResult DetailMovie(int id)
         {
             return View(_mgr.GetMovie(id));
         }
 
+        /**
+         * Detailed overview of a series
+         */
         public IActionResult DetailSeries(int id)
         {
             return View(_mgr.GetSeries(id));
@@ -38,7 +50,7 @@ namespace MovieDatabase.UI.Controllers
         public IActionResult EditMovie(int id)
         {
             Movie movie = _mgr.GetMovie(id);
-            if (movie == null) return NotFound();
+            if (movie == null) return NotFound(); //TODO: handle not found
             return View(movie);
         }
 
@@ -51,6 +63,7 @@ namespace MovieDatabase.UI.Controllers
             }
 
             _mgr.ChangeMovie(movie);
+
             return RedirectToAction("Index");
         }
 
@@ -59,7 +72,10 @@ namespace MovieDatabase.UI.Controllers
             return View(_mgr.GetSeries(id));
         }
 
-        [HttpGet]
+
+        /**
+         * Removes item from list in Index.cshtml
+         */
         public IActionResult DeleteMedia(int id)
         {
             _mgr.RemoveMedia(_mgr.GetMedia(id));

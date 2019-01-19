@@ -17,8 +17,9 @@ namespace MovieDatabase.BL.Domain
         public DateTime? WatchDate { get; set; }
 
         public ICollection<ActorAct> ActorActs { get; set; }
-        public ICollection<MediaGenre> MediaGenres { get; set; }
+        public IList<MediaGenre> MediaGenres { get; set; }
 
+        //TODO: delete this
         public override string ToString()
         {
             return $"Title: {Title}\nRelease date: {ReleaseDate}\n";
