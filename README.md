@@ -6,7 +6,7 @@ Web application using:
   - EntityFrameWorkCore
 
 Contains the following functionalities:
-  - Add movies and TV shows that have been watched or that you want to watch
+  - Add movies and TV shows that you've watched or want to watch
   - List watched movies
   - List movies to watch
   - List of actors (TODO)
