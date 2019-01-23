@@ -1,23 +1,16 @@
-@using Microsoft.EntityFrameworkCore.Internal
-@using MovieDatabase.BL.Domain
-@model MovieDatabase.BL.Domain.Movie
+@model MovieDatabase.BL.Domain.Media
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Details";
     Layout = "_Layout";
 }
 @{
     string releaseYear = Model.ReleaseDate != null ? Model.ReleaseDate.ToString() : "?";
     var shortWatchDate = Model.WatchDate != null ? Model.WatchDate.Value.ToShortDateString() : "?";
-    @*
-    var genre = Model.Genre != null ? Model.Genre.Name : "Onbekend";
-    *@
     var score = Model.Rating == null ? "?" : Model.Rating.ToString();
-    var duration = Model.Duration == null ? "?" : Model.Duration.ToString();
-    string isPresent = Model.IsPresent ? "Ja" : "Nee";
 }
 
-<h2>Details film</h2>
+<h2>Details</h2>
 
 <h3>
     <b>@Model.Title</b>
@@ -28,7 +21,7 @@
     @{
         if (Model.MediaGenres != null && Model.MediaGenres.Any())
         {
-            <ul>
+            <ul class="list-group">
                 @foreach (var item in Model.MediaGenres)
                 {
                     <li>@item.Genre.ToString("G")</li>
@@ -36,33 +29,27 @@
             </ul>
         }
     }
-    <b>Duur:</b> @duration <br/>
 </p>
 
 <p>
     <b>Nr: </b> @Model.Id <br/>
     <b>Mijn score: </b> @score <br/>
     <b>Gekeken op: </b> @shortWatchDate <br/>
-    <b>Aanwezig op pc: </b> @isPresent <br/>
 </p>
 
-@*
-TODO
-
-@if (Model.Actors != null && Model.Actors.Any())
+@if (Model.ActorActs != null && Model.ActorActs.Any())
 {
     <h4>
         <b>Acteurs/Actrices</b>
     </h4>
     <ul class="list-group">
-        @foreach (Actor a in Model.Actors)
+        @foreach (var item in Model.ActorActs)
         {
             <li>
-                <a>@a.Name</a>
+                <a>@item.Actor.Name</a>
             </li>
         }
     </ul>
 }
-*@
 
 <a asp-controller="Movie", asp-action="Index">Terug naar overzicht bekeken films</a>

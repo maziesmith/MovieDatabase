@@ -8,6 +8,8 @@
 
 <h2>Bekeken films</h2>
 
+<a asp-controller="Movie" asp-action="Create">Nieuw toevoegen +</a> <br/>
+
 <form asp-controller="Movie" asp-action="Index">
     <p>
         Title: <input type="text" name="SearchString">
@@ -43,27 +45,21 @@
             name2 = actorActs.ElementAt(1).Actor.Name;
             name3 = actorActs.ElementAt(2).Actor.Name;
         }
-        catch (ArgumentOutOfRangeException e)
+        catch (Exception e)
         {
             // do nothing
         }
-        catch (ArgumentNullException e2)
-        {
-            // do nothing
-        }
-        var detailMethod = item.MediaType == MediaType.Movie ? "DetailMovie" : "DetailSeries";
-        var editMethod = item.MediaType == MediaType.Movie ? "EditMovie" : "EditSeries";
         <tr>
             <td>@Html.DisplayFor(media => item.Id)</td>
-            <td>@Html.ActionLink(item.Title, detailMethod, "Movie", new {id = item.Id})</td>
+            <td>@Html.ActionLink(item.Title, "Detail", "Movie", new {id = item.Id})</td>
             <td>@item.MediaType.MediaTypeToString()</td>
             <td>@shortDate</td>
             <td>@name1</td>
             <td>@name2</td>
             <td>@name3</td>
             <td>
-                @Html.ActionLink("Bewerken", editMethod, "Movie", new {id = item.Id}) |
-                @Html.ActionLink("Delete", "DeleteMedia", "Movie", new {id = item.Id})
+                @Html.ActionLink("Bewerken", "Edit", "Movie", new {id = item.Id}) |
+                @Html.ActionLink("Delete", "Delete", "Movie", new {id = item.Id})
             </td>
         </tr>
     }

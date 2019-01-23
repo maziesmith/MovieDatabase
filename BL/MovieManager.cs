@@ -6,72 +6,43 @@ namespace MovieDatabase.BL
 {
     public class MovieManager : IMovieManager
     {
-        private readonly IMovieRepository _movieRepository;
+        private readonly IMovieRepository _repo;
 
         public MovieManager()
         {
-            _movieRepository = new MovieRepository();
+            _repo = new MovieRepository();
         }
 
-        public IMovieRepository GetRepository()
+        public void Add(Media media)
         {
-            return _movieRepository;
+            _repo.Create(media);
         }
 
-        public IEnumerable<Media> GetAllMedia()
+        public Media Get(int id)
         {
-            return _movieRepository.ReadAllMedia();
+            return _repo.Read(id);
         }
 
-        public Media GetMedia(int id)
+        public IEnumerable<Media> GetAll()
         {
-            return _movieRepository.ReadMedia(id);
+            return _repo.ReadAll();
+        }
+
+        public IEnumerable<Media> GetByTitle(string title)
+        {
+            return _repo.ReadByTitle(title);
         }
 
 
-        public Movie GetMovie(int id)
+        public void Change(Media media)
         {
-            return _movieRepository.ReadMovie(id);
+            _repo.Update(media);
         }
 
-        public Series GetSeries(int id)
-        {
-            return _movieRepository.ReadSeries(id);
-        }
 
-        public void AddMovie(Movie movie)
+        public void Remove(Media media)
         {
-            _movieRepository.CreateMovie(movie);
-        }
-
-        public void AddSeries(Series series)
-        {
-            _movieRepository.CreateSeries(series);
-        }
-
-        public void ChangeMovie(Movie movie)
-        {
-            _movieRepository.UpdateMovie(movie);
-        }
-
-        public void ChangeSeries(Series series)
-        {
-            _movieRepository.UpdateSeries(series);
-        }
-
-        public void RemoveMedia(Media media)
-        {
-            _movieRepository.DeleteMedia(media);
-        }
-
-        public IEnumerable<Media> GetMediaByTitle(string searchString)
-        {
-            return _movieRepository.ReadMediaByTitle(searchString);
-        }
-
-        public void AddMediaGenre(Media media, IEnumerable<Genre> genres)
-        {
-            _movieRepository.CreateMediaGenre(media, genres);
+            _repo.Delete(media);
         }
     }
 }

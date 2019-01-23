@@ -1,5 +1,5 @@
 @using MovieDatabase.BL.Domain
-@model MovieDatabase.BL.Domain.Movie
+@model MovieDatabase.BL.Domain.Media
 
 @{
     ViewBag.Title = "title";
@@ -8,7 +8,7 @@
 
 <h2>Gegevens bewerken</h2>
 
-<form asp-controller="Movie" asp-action="EditMovie" method="post">
+<form asp-controller="Movie" asp-action="Edit" method="post">
     <div class="form-group">
         <label asp-for="Id" class="control-label">Nr</label>
         <span class="text-danger"></span>
@@ -25,11 +25,6 @@
         <input asp-for="ReleaseDate" class="form-control"/>
     </div>
     <div class="form-group">
-        <label asp-for="Priority" class="control-label">Prioriteit</label>
-        <span class="text-danger"></span>
-        <input asp-for="Priority" class="form-control"/>
-    </div>
-    <div class="form-group">
         <label asp-for="Rating" class="control-label">Score</label>
         <span class="text-danger"></span>
         <input asp-for="Rating" class="form-control"/>
@@ -39,11 +34,6 @@
         <select asp-for="MediaGenres[0].Genre" asp-items="Html.GetEnumSelectList<Genre>()"></select>
         <select asp-for="MediaGenres[1].Genre" asp-items="Html.GetEnumSelectList<Genre>()"></select>
     </div>
-    <div class="form-group">
-        <label asp-for="IsPresent" class="control-label">Aanwezig op pc</label>
-        <span class="text-danger"></span>
-        <input asp-for="IsPresent" class="form-control"/>
-    </div>
     @{
         string shortWatchDate = Model.WatchDate != null ? Model.WatchDate.Value.ToShortDateString() : "?";
     }
@@ -52,12 +42,6 @@
         <span class="text-danger"></span>
         <input asp-for="@shortWatchDate" class="form-control"/>
     </div>
-    <div class="form-group">
-        <label asp-for="Duration" class="control-label">Duur</label>
-        <span class="text-danger"></span>
-        <input asp-for="Duration" class="form-control"/>
-    </div>
-
     <button class="btn btn-default" type="submit">Bevestig update</button>
 </form>
 

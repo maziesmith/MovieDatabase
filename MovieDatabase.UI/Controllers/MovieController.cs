@@ -1,20 +1,15 @@
-using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using MovieDatabase.BL;
 using MovieDatabase.BL.Domain;
+using MovieDatabase.UI.Models;
 
 namespace MovieDatabase.UI.Controllers
 {
     public class MovieController : Controller
     {
-        private readonly IMovieManager _mgr;
-
-        public MovieController()
-        {
-            _mgr = new MovieManager();
-        }
+        private readonly IMovieManager _movieManager = new MovieManager();
+        private readonly IActorManager _actorManager = new ActorManager();
 
         /**
          * Returns a list of all media
@@ -24,62 +19,99 @@ namespace MovieDatabase.UI.Controllers
         {
             if (!string.IsNullOrEmpty(searchString))
             {
-                return View(_mgr.GetMediaByTitle(searchString));
+                return View(_movieManager.GetByTitle(searchString));
             }
 
-            return View(_mgr.GetAllMedia());
+            return View(_movieManager.GetAll());
         }
 
         /**
          * Detailed overview of a movie
          */
-        public IActionResult DetailMovie(int id)
+        public IActionResult Detail(int id)
         {
-            return View(_mgr.GetMovie(id));
+            return View(_movieManager.Get(id));
+        }
+
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Media media = _movieManager.Get(id);
+            if (media == null) return NotFound(); //TODO: handle not found
+            return View(media);
         }
 
         /**
-         * Detailed overview of a series
+         * Change some data
          */
-        public IActionResult DetailSeries(int id)
-        {
-            return View(_mgr.GetSeries(id));
-        }
-
-        [HttpGet]
-        public IActionResult EditMovie(int id)
-        {
-            Movie movie = _mgr.GetMovie(id);
-            if (movie == null) return NotFound(); //TODO: handle not found
-            return View(movie);
-        }
-
-        [HttpPost]
-        public IActionResult EditMovie(Movie movie)
+        [HttpPut]
+        public IActionResult Edit(Media media)
         {
             if (!ModelState.IsValid)
             {
-                return View(movie);
+                return View(media);
             }
 
-            _mgr.ChangeMovie(movie);
+            _movieManager.Change(media);
 
             return RedirectToAction("Index");
-        }
-
-        public IActionResult EditSeries(int id)
-        {
-            return View(_mgr.GetSeries(id));
         }
 
 
         /**
          * Removes item from list in Index.cshtml
          */
-        public IActionResult DeleteMedia(int id)
+        public IActionResult Delete(int id)
         {
-            _mgr.RemoveMedia(_mgr.GetMedia(id));
+            _movieManager.Remove(_movieManager.Get(id));
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        /**
+         * Add new Media
+         */
+        [HttpPost]
+        public IActionResult Create(MediaViewModel mediaViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(mediaViewModel);
+            }
+
+            Media media = ViewModelToMedia(mediaViewModel);
+            _movieManager.Add(media);
+            return RedirectToAction("Index");
+        }
+
+        private Media ViewModelToMedia(MediaViewModel model)
+        {
+            Media m = model.Media;
+            m.ActorActs = new List<ActorAct>();
+            foreach (string name in model.Actors)
+            {
+                ActorAct aa = new ActorAct();
+                if (!_actorManager.Exists(name))
+                {
+                    aa.Actor = new Actor {Name = name};
+                    aa.Media = m;
+                }
+                else
+                {
+                    aa.Actor = _actorManager.GetByName(name);
+                }
+
+                aa.Media = m;
+                m.ActorActs.Add(aa);
+            }
+
+            return m;
         }
     }
 }

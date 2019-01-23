@@ -7,97 +7,50 @@ namespace MovieDatabase.DAL
 {
     public class MovieRepository : IMovieRepository
     {
-        private readonly MovieDatabaseDbContext _context = new MovieDatabaseDbContext();
+        private readonly MovieDatabaseDbContext _ctx = new MovieDatabaseDbContext();
 
-        public MovieDatabaseDbContext GetContext()
+        public void Create(Media media)
         {
-            return _context;
+            _ctx.Media.Attach(media);
+            _ctx.SaveChanges();
         }
 
-
-        public IEnumerable<Media> ReadAllMedia()
+        public Media Read(int id)
         {
-            return _context.Media;
+            return _ctx.Media
+                .Include(m => m.MediaGenres)
+                .Include(m => m.ActorActs)
+                .ThenInclude(aa => aa.Actor)
+                .FirstOrDefault(m => m.Id == id);
         }
 
-        public Media ReadMedia(int id)
+        public IEnumerable<Media> ReadAll()
         {
-            return _context.Media.Find(id);
+            return _ctx.Media.Include(m => m.ActorActs).ThenInclude(aa => aa.Actor);
         }
 
-        public Movie ReadMovie(int id)
+        public IEnumerable<Media> ReadByTitle(string title)
         {
-            return _context.Movies.Include(m => m.MediaGenres).FirstOrDefault(m => m.Id == id);
+            return _ctx.Media.Include(m => m.ActorActs).Where(m => m.Title.ToLower().Contains(title.ToLower()));
         }
 
-        public Series ReadSeries(int id)
+        public void Update(Media media)
         {
-            return _context.Series.Find(id);
+            Media m = Read(media.Id);
+            m.Title = media.Title;
+            m.ReleaseDate = media.ReleaseDate;
+            m.Rating = media.Rating;
+            m.Priority = media.Priority;
+            m.WatchDate = media.WatchDate;
+            m.ActorActs = media.ActorActs;
+            m.MediaGenres = media.MediaGenres;
+            _ctx.SaveChanges();
         }
 
-        public void CreateMovie(Movie movie)
+        public void Delete(Media media)
         {
-            _context.Movies.Add(movie);
-            _context.SaveChanges();
-        }
-
-        public void CreateSeries(Series series)
-        {
-            _context.Series.Add(series);
-            _context.SaveChanges();
-        }
-
-        //TODO: find a way to reduce duplicate code
-        public void UpdateMovie(Movie movie)
-        {
-            Movie m = ReadMovie(movie.Id);
-            m.Title = movie.Title;
-            m.ReleaseDate = movie.ReleaseDate;
-            m.Rating = movie.Rating;
-            m.Priority = movie.Priority;
-            m.IsPresent = movie.IsPresent;
-            m.WatchDate = movie.WatchDate;
-            m.ActorActs = movie.ActorActs;
-            m.Duration = movie.Duration;
-            m.MediaGenres = movie.MediaGenres;
-            _context.SaveChanges();
-        }
-
-        public void UpdateSeries(Series series)
-        {
-            Series s = ReadSeries(series.Id);
-            s.Title = series.Title;
-            s.ReleaseDate = series.ReleaseDate;
-            s.Rating = series.Rating;
-            s.Priority = series.Priority;
-            s.IsPresent = series.IsPresent;
-            s.WatchDate = series.WatchDate;
-            s.ActorActs = series.ActorActs;
-            s.Season = series.Season;
-            s.Channel = series.Channel;
-            s.MediaGenres = s.MediaGenres;
-            _context.SaveChanges();
-        }
-
-        public void DeleteMedia(Media media)
-        {
-            _context.Media.Remove(media);
-            _context.SaveChanges();
-        }
-
-        public IEnumerable<Media> ReadMediaByTitle(string searchString)
-        {
-            return _context.Media.Where(m => m.Title.ToLower().Contains(searchString.ToLower()));
-        }
-
-        public void CreateMediaGenre(Media media, IEnumerable<Genre> genres)
-        {
-            foreach (var genre in genres)
-            {
-                _context.MediaGenres.Add(new MediaGenre {Genre = genre, Media = media});
-            }
-
-            _context.SaveChanges();
+            _ctx.Media.Remove(media);
+            _ctx.SaveChanges();
         }
     }
 }

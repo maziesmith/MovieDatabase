@@ -1,0 +1,82 @@
+@using MovieDatabase.BL.Domain
+@model MediaViewModel
+@{
+    ViewBag.Title = "Nieuw item toevoegen";
+    Layout = "_Layout";
+}
+
+<h2>Nieuw item toevoegen</h2>
+
+<form asp-controller="Movie" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Media.Title" class="control-label">Titel</label>
+        <span asp-validation-for="Media.Title" class="text-danger"></span>
+        <input asp-for="Media.Title" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Media.ReleaseDate" class="control-label">Release Date</label>
+        <span asp-validation-for="Media.ReleaseDate" class="text-danger"></span>
+        <input asp-for="Media.ReleaseDate" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Media.Rating" class="control-label">Score</label>
+        <span asp-validation-for="Media.Rating" class="text-danger"></span>
+        <input asp-for="Media.Rating" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Genres</label>
+        <select asp-for="Genres[0]" asp-items="Html.GetEnumSelectList<Genre>()"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Media.WatchDate" class="control-label">Gekeken op</label>
+        <span asp-validation-for="Media.WatchDate" class="text-danger"></span>
+        <input asp-for="Media.WatchDate" type="date" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Acteur/Actrice</label>
+        <div id="add_actor_0">
+            <span asp-validation-for="Actors" class="text-danger"></span>
+            <input asp-for="Actors[0]" class="form-control"/>
+        </div>
+        <div id="add_actor_1">
+            <span asp-validation-for="Actors" class="text-danger"></span>
+            <input asp-for="Actors[1]" class="form-control"/>
+        </div>
+        <div id="add_actor_2">
+            <span asp-validation-for="Actors" class="text-danger"></span>
+            <input asp-for="Actors[2]" class="form-control"/>
+        </div>
+        <button type="button" id="add_actor_btn">Extra acteur</button>
+    </div>
+    <button class="btn btn-default" type="submit">Item toevoegen</button>
+</form>
+
+
+@section Scripts {
+    @*
+    <script type="text/javascript">
+        let index = 1;
+        $("#add_actor_btn").on('click',
+            () => {
+                if (index === 9) alert("index too high" + index);
+                let newField =
+                    '<span class="text-danger field-validation-valid" data-valmsg-for="Actors" data-valmsg-replace="true"></span>' +
+                        '<input class="form-control valid" type="text" id="Actors_' +
+                        index +
+                        '_" name="Actors[' +
+                        index +
+                        ']" value="" aria-invalid="false">'
+                $('#add_actor_' + (index - 1)).after(newField);
+                index++;
+            });
+        $(document).on('click',
+            '.delete_actor',
+            () => {
+                if (index === 0) return;
+                $('#add_actor_' + (index-1)).remove();
+                index--;
+            });
+    </script>
+    *@
+    <partial name="_ValidationScriptsPartial"/>
+}
